@@ -104,7 +104,7 @@ def drv_entro_step2(_1, picked, _2):
         msg = 'Seed words (%d):\n' % len(words)
         msg += '\n'.join('%2d: %s' % (i+1, w) for i,w in enumerate(words))
 
-        encoded = stash.SecretStash.encode(seed_phrase=new_secret)
+        encoded = stash.SecretStash.encode(seed_phrase=words)
 
     elif s_mode == 'wif':
         # for Bitcoin Core: a 32-byte of secret exponent, base58 w/ prefix 0x80
